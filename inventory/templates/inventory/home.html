@@ -1,0 +1,124 @@
+{% extends './base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<section class="banner">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-8 heading">
+					<h1 style="color:white; font-size: 0.25em; font-family: 'Satisfy', cursive; line-height: 95px; margin-top: -9%;">Welcome To Your Personalized Restaurant Management System</h1>
+				</div>
+				<div class="col-sm-5"></div>
+			</div>
+		</div>
+</section>
+
+<div class='ing_container'>
+	<h2 id='inventory'> Inventory </h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Quantity</th>
+				<th>Unit</th>
+				<th>Price per Unit</th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			{% for item in ingredient_list %}
+			<tr>
+				<td>{{ item.name }}</td>
+				<td>{{ item.quantity|stringformat:".1f" }}</td>
+				<td>{{ item.unit }}</td>
+				<td>${{ item.unit_price|stringformat:".3f" }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<p></p>
+	<a href="{% url 'inventory' %}"><button type="button" class="btn btn-dark btn-lg">Edit Inventory</button></a>
+	<p></p>
+</div>
+
+<div class='menu_container'>
+	<h2 id='menu'> Menu </h2>
+	{% for item in menu_items %}
+	<div class='menu_item'>
+		<div class="menu-item-header">
+			<div class="menu-item-title">{{ item.title }}</div>
+			<div class="menu-item-price">${{ item.price|stringformat:".2f" }}</div>
+		</div>
+		<ul class="menu-item-ingredients">
+			{% for recipe_requirement in item.reciperequirement_set.all %}
+			<li>{{ recipe_requirement.quantity_Required }} {{recipe_requirement.ingredient.unit }}
+				{{ recipe_requirement.ingredient.name }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endfor %}
+	<a href="{% url 'menu_list' %}"><button type="button" class="btn btn-dark btn-lg">Edit Menu</button></a>
+	<p></p>
+</div>
+
+
+
+<div class='ing_container margin no_top'>
+	<h2 id='purchase_log'> Purchase Log </h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Price</th>
+				<th>Time</th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			{% for item in purchase_log %}
+			<tr>
+				<td>{{ item.menu_item.title }}</td>
+				<td>${{ item.menu_item.price|stringformat:".2f" }}</td>
+				<td>{{ item.timestamp }}</td>
+			</tr>
+
+			{% endfor %}
+		</tbody>
+	</table>
+	<p></p>
+	<a href="{% url 'purchase_log' %}"><button type="button" class="btn btn-dark btn-lg">Edit Purchase Log</button></a>
+	<p></p>
+</div>
+
+{% endblock %}

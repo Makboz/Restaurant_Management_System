@@ -1,0 +1,54 @@
+{% extends './base.html' %}
+
+{% block title %} Inventory {% endblock %}
+
+{% block body %}
+
+<div class='ing_container top'>
+  <h2 id='inventory'> Inventory </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Price per Unit</th>
+      </tr>
+      <tr>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+      </tr>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+      </tr>
+      {% for item in ingredient_list %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity|stringformat:".1f" }}</td>
+        <td>{{ item.unit }}</td>
+        <td>${{ item.unit_price|stringformat:".3f" }}</td>
+        <td><a href="{% url 'ingredient_update' item.id %}"><button type="button"
+              class="btn btn-secondary btn-sm">Update</button></a></td>
+        <td><a href="{% url 'ingredient_delete' item.id %}"><button type="button"
+              class="btn btn-primary btn-sm">Delete</button></a></td>
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p></p>
+  <a href="{% url 'ingredient_add' %}"><button type="button" class="btn btn-dark hover btn-lg" style="background:#0047AB;">Add an Ingredient</button></a>
+  <p></p>
+</div>
+
+{% endblock %}

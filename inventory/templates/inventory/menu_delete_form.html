@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block title %} Menu - Delete Item {% endblock %}
+
+{% block body %}
+<div class='form_container'>
+  <br><br><br><br><br>
+  <form method="post">
+    <div>
+      {% csrf_token %}
+      <p style="font-size: 1.3em;">Are you sure you want to delete "{{ object.title }}" from your Menu?</p><br>
+      <input class="btn btn-danger btn-lg" type="submit" value="Confirm" />
+    </div>
+  </form>
+</div>
+{% endblock %}

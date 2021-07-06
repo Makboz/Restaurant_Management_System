@@ -1,0 +1,49 @@
+{% extends './base.html' %}
+
+{% block title %} Purchase Log {% endblock %}
+
+{% block body %}
+
+<div class='ing_container margin no_top'>
+	<h2 id='purchase_log'> Purchase Log </h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Price</th>
+				<th>Time</th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			{% for item in purchase_log %}
+			<tr>
+				<td>{{ item.menu_item.title }}</td>
+				<td>${{ item.menu_item.price|stringformat:".2f" }}</td>
+				<td>{{ item.timestamp }}</td>
+        <td><a href="{% url 'purchase_delete' item.id %}"><button type="button" class="btn btn-primary btn-md">Delete</button></a></td>
+			</tr>
+
+			{% endfor %}
+		</tbody>
+	</table>
+	<p></p>
+	<a href="{% url 'purchase_add' %}"><button type="button" class="btn btn-primary btn-lg" style="background:#0047AB; border:0.5px solid black">Record a Purchase</button></a>
+	<p></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(home_back.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    font-size: 80px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+@media screen and (max-width: 540px) {
+    .banner {
+      font-size: 65px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(home_back.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    font-size: 80px;
+}
+
+.margin {
+    margin-top: 16%;
+}
+
+.my_row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.my_col {
+    flex-basis: 50%;
+}
+
+
+.row h1 {
+    color: #fff;
+    font-size: 1.35em;
+    margin-bottom: 55px;
+    font-family: 'Bad Script', cursive;
+}
+
+p {
+    color: #fff;
+    font-size: 0.25em;
+    line-height: 24px;
+}
+
+.my_button {
+    width: 170px;
+    color: #000;
+    font-size: 0.24em;
+    padding: 11px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.yellow {
+    background-color: #fed136;
+    color: black;
+}
+
+.white {
+    background: white;
+    color: #000;
+}
+
+.yellow:hover {
+    background: black;
+    color: #fed136;
+    font-weight: bold;
+}
+
+.white:hover {
+    background: grey;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.further {
+    background: black;
+}
+
+.margin_top {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card, .back {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(wooden2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    border-radius: 40px;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+.card h5 {
+    color: white;
+    text-shadow: 0 0 15px #000;
+    font-size: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 0.5px solid white;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.further .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 770px) {
+    .banner {
+      font-size: 65px;
+      width: 100%;
+      height: 70vh;
+    }
+    p {
+        line-height: 22px;
+        width: 550px;
+    }
+
+    .margin {
+        margin-left: -10px;
+        margin-top: 200px;
+    }
+
+    .my_button {
+        margin-top: 0px;
+        margin-right: 10px;
+        width: 140px;
+        font-size: 0.27em;
+        padding: 11px 0;
+    }
+
+    .card p {
+        width: 18rem;
+    }
+  }
+
+
+  @media screen and (max-width: 692px) {
+    .banner {
+      font-size: 60px;
+        width: 100%;
+        height: 60vh;
+    }
+    p {
+        line-height: 18px;
+        width: 550px;
+    }
+
+    .row h1 {
+        font-size: 1.25em;
+    }
+
+    .margin {
+        margin-left: 0px;
+        margin-top: 200px;
+    }
+
+    .my_button {
+        margin-top: 0px;
+        margin-right: 10px;
+        width: 140px;
+        font-size: 0.27em;
+        padding: 11px 0;
+    }
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .banner {
+      font-size: 40px;
+      width: 100%;
+      height: 50vh;
+    }
+    p {
+        line-height: 12px;
+        width: 550px;
+        font-size: 0.28em;
+    }
+
+    .row h1 {
+        margin-bottom: 33px;
+        font-size: 1.20em;
+    }
+
+    .margin {
+        margin-left: 0px;
+        margin-top: 100px;
+    }
+
+    .my_button {
+        margin-top: 0px;
+        margin-right: 8px;
+        width: 90px;
+        font-size: 0.28em;
+        padding: 8px 0;
+    }
+
+
+
+    .card {
+        width: 4rem;
+        height: 25vh;
+        left: 8.5%;
+        margin-right: 5%; 
+        padding-top: 0px;
+        padding-bottom: -5px;
+    }
+
+    .card-text {
+        position: relative;
+        left: -3.3%;
+    }
+    
+    
+    .card h5 {
+        font-size: 20px;
+    }
+    
+    .card p {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+  }
+
+
+/*
+
+.my_container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(home_back.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.my_navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a {
+    width: 140px;
+    color: black;
+    font-size: 18px;
+    padding: 13px 13px;
+    background: white;
+    border: 0;
+    border-radius: 14px;
+    outline: none;
+    margin-top: 0px;
+    text-decoration: none;
+}
+
+.my_row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.my_col {
+    flex-basis: 50%;
+}
+
+.margin {
+    margin-right: 50px;
+}
+
+.margin h1 {
+    color: #fff;
+    font-size: 85px;
+}
+
+p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 15px;
+}
+
+.my_button {
+    width: 180px;
+    color: #000;
+    font-size: 20px;
+    padding: 12px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: grey;
+    color: white;
+    font-weight: bold;
+}
+
+.my_card {
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(wooden2.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.my_card:hover {
+    transform: translateY(-10px);
+}
+
+.my_card h5 {
+    color: white;
+    text-shadow: 0 0 15px #000;
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.my_card p {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+}
+
+*/

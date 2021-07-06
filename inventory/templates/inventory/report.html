@@ -1,0 +1,39 @@
+{% extends './base.html' %}
+
+{% block title %} Performance Report {% endblock %}
+
+{% block body %}
+
+<div class='ing_container margin no_top'>
+    <h2 id='purchase_log'> Performance Report </h2>
+
+    <div style="padding-bottom:5px;">
+        <text style="font-size: 0.75em;">Total Revenue:</text>
+        {% if revenue is None %}
+            <text class="menu-item-title" style="color: lightgreen;">$0.00</text>
+        {% else %}
+            <text class="menu-item-title" style="color: lightgreen;">${{ revenue|stringformat:".2f" }}</text>
+        {% endif %}
+    </div>
+
+    <div style="padding-bottom:5px;">
+        <text style="font-size: 0.75em;">Total Cost:</text>
+        <text class="menu-item-title" style="color: pink;">${{ total_cost|stringformat:".2f" }}</text>
+    </div>
+
+    <div style="padding-bottom:15px;">
+        {% if profit is None %}
+        <text class="menu-item-title">Total Profit:</text>
+        <text class="menu-item-title">$0.00</text>
+        {% else %}
+            {% if profit >= 0 %}
+                <text class="menu-item-title">Total Profit:</text>
+                <text class="menu-item-title" style="color: green;">${{ profit|stringformat:".2f" }}</text>
+            {% else %}
+                <text class="menu-item-title">Total Profit:</text>
+                <text class="menu-item-title" style="color: red;">${{ profit|stringformat:".2f" }}</text>
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

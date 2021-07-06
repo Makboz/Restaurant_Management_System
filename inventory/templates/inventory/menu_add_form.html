@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block title %} Menu - Add an Item {% endblock %}
+
+{% block body %}
+<div class='form_container'>
+  <h1>Add Item to Menu</h1> <br>
+  <form method="post">
+    <div>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn btn-primary btn-lg" value="Add" />
+    </div>
+  </form>
+</div>
+{% endblock %}

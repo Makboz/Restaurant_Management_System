@@ -1,0 +1,361 @@
+nav {
+    background-color: #181818;
+    z-index: 20;
+}
+
+.fonter {
+    font-family: 'Bad Script', cursive;
+}
+
+button:hover {
+    color:black;
+    background: blue;
+}
+
+.banner {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(background_pics.jpg);
+    opacity: 1;
+    height: 82vh;
+    background-size: cover;
+    background-position: center;
+    margin-top: 72px;
+    font-size: 90px;
+}
+
+
+.heading {
+    opacity: 1;
+    color:#fff;
+    font-weight: bold;
+    font-size: 3em;
+    z-index:5;
+    text-align: center;
+    margin-top: 4%;
+    font-family: 'Satisfy', cursive;
+}
+
+.heading h1 {
+    color: #fff;
+}
+
+.top_heading {
+    opacity: 1;
+    color:white;
+    font-weight: bold;
+    font-size: 3em;
+    z-index:5;
+    text-align: center;
+}
+
+.navbar {
+    height: 10%;
+}
+
+.navbar-dark .navbar-brand {
+    font-weight: 600;
+    font-size: 2em;
+    margin-right: 25px;
+}
+
+.navbar-nav .active {
+    font-weight: 500;
+}
+
+.nav-item {
+    font-weight: 400;
+    font-size: 1em;
+    padding: 0 3px 0 3px;
+}
+
+.navbar-nav .logout {
+    font-size: 1.15em;
+}
+
+.navbar-dark .navbar-toggler
+{
+    margin-right: 10px;
+}
+
+.ing_container {
+    position: relative;
+    top: 40px;
+    width: 60%;
+    display: block;
+    margin: 0px auto 140px auto;
+    text-align: center;
+    border: 3px solid #303030;
+    overflow: hidden;
+    font-size: 45px;
+  }
+
+  .no_top {
+    position: relative;
+    top: 0px;
+  }
+
+.top {
+    margin: 70px auto 80px auto;
+}
+
+.ing_container td {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+.ing_container thead {
+    font-size: 1.3em;
+    font-weight: normal;
+    width: 80%;
+    border-bottom: 1px solid black;
+    padding-bottom: 50px;
+}
+
+#inventory {
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+table {
+    font-size: 0.4em;
+    width: 90%;
+    position: relative;
+    left: 7%;
+    height: 100%;
+}
+
+.ing_container h2 {
+    padding-bottom: 30px;
+}
+
+.ing_container table {
+    padding-bottom: 300px;
+}
+
+.heading {
+    position:absolute;
+    top: 80px;
+}
+
+
+.menu_container {
+    width: 60%;
+    display: block;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    border: 3px solid #303030;
+    overflow: hidden;
+    font-size: 45px;
+    align-content: justify;
+  }
+
+.topper {
+    margin: 120px auto 0 auto;
+}
+
+  .font_check {
+    font-size: 35px;
+    width: 60%;
+  }
+
+
+.menu_container .menu_item {
+    border: 1px solid black;
+    width: 80%;
+    margin-bottom: 30px;
+    position: relative;
+    left: 10%;
+    padding-left: 10px;
+}
+
+#menu {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+#purchase_log {
+    font-size: 1.1em;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+.menu-items * {
+    padding: 0;
+}
+
+.menu-items > li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid grey;
+    margin: 10px 0;
+    border-radius: 10px;
+    justify-content: left;
+    flex-basis: 45%;
+}
+
+.menu-items, .menu-items ul {
+    list-style-type: none;
+}
+
+.menu-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+
+.menu-item-title {
+    font-weight: bold;
+    font-size: 0.80em;
+}
+.menu-item-price {
+    font-size: 0.70em;
+    padding-right: 15px;
+}
+
+.menu-item-ingredients {
+    text-align: left;
+    font-size: 0.40em;
+}
+
+.ingredient_font {
+    font-size: 0.5em;
+}
+
+.menu-item-ingredients * {
+    padding: 5px 0;
+}
+
+.margin {
+    margin-top: 100px;
+}
+
+
+.form_container {
+    width: 100%;
+    display: block;
+    margin: 120px auto 0 auto;
+    text-align: center;
+    overflow: hidden;
+    font-size: 20px;
+  }
+
+
+
+  .my_button {
+    width: 170px;
+    color: #000;
+    font-size: 0.24em;
+    padding: 11px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.white {
+    background: white;
+    color: #000;
+}
+
+
+
+  @media screen and (min-width: 700px) {
+    .heading {
+        margin-left: -10%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    
+    .banner {
+        font-size: 70px;
+        width: 100%;
+    }
+
+    .navbar-collapse{
+        background-color: #181818;
+      }
+      .navbar{
+          background-color : #181818;
+        }
+    
+      .navbar-nav > li {
+        background-color: #181818;
+        padding-bottom: 2%;
+        padding-left: 5%;
+    }
+    
+    .navbar-collapse {
+        background-color : #181818;
+    }
+
+
+    .ing_container {
+        position: relative;
+        top: 40px;
+        width: 95%;
+        border: 2px solid #303030;
+        font-size: 30px;
+      }
+
+    .menu_container {
+        width: 95%;
+        display: block;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        border: 2px solid #303030;
+        overflow: hidden;
+        font-size: 27px;
+        align-content: justify;
+      }
+      .menu-item-title {
+        margin-right: 2%;
+        text-align: left;
+    }
+    .menu-item-ingredients {
+        text-align: left;
+        font-size: 0.5em;
+    }
+
+    table {
+        font-size: 0.4em;
+        width: 95%;
+        position: relative;
+        left: 2%;
+        height: 100%;
+    }
+    .margin {
+        margin-top: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    
+    .banner {
+        font-size: 70px;
+        width: 100%;
+    }
+
+    .navbar-collapse{
+        background-color: #181818;
+      }
+      .navbar{
+          background-color : #181818;
+        }
+    
+      .navbar-nav > li {
+        background-color: #181818;
+        padding-bottom: 2%;
+        padding-left: 5%;
+    }
+    
+    .navbar-collapse {
+        background-color : #181818;
+    }
+}

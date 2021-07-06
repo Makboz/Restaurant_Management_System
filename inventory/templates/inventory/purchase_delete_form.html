@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block title %} Delete Purchased Item {% endblock %}
+
+{% block body %}
+<div class='form_container'>
+  <br><br><br><br><br>
+  <form method="post">
+    <div>
+      {% csrf_token %}
+      <p style="font-size: 1.3em;">Are you sure you want to delete the purchase of "{{ object.menu_item.title }}" bought on "{{ object.timestamp }}" from your Purchase Log?</p><br>
+      <input class="btn btn-danger btn-lg" type="submit" value="Confirm" />
+    </div>
+  </form>
+</div>
+{% endblock %}

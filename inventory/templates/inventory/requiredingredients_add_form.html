@@ -1,0 +1,40 @@
+{% extends './base.html' %}
+
+{% block title%} Add Recipe Requirement {% endblock %}
+
+{% block body %}
+<div class='form_container'>
+    <h1>Add Recipe Requirement for a Menu Item</h1><br>
+    <form method="post">
+      <div>
+        {% csrf_token %}
+        <p>
+            <label for="menu_item">Menu item:</label>
+            <select name="menu_item" id="menu_item" required>
+              <option value selected>-----</option>
+              {% for menu_item in menu_item %}
+              <option value={{ menu_item.id }}>{{ menu_item.title }} -- ${{ menu_item.price }}</option>
+              {% endfor %}
+            </select>
+          </p>
+    
+          <p>
+            <label for="ingredient">Ingredient:</label>
+            <select name="ingredient" id="ingredient" required>
+              <option value selected>-----</option>
+              {% for ingredient in ingredient %}
+              <option value={{ ingredient.id }}>{{ ingredient.name }} -- ${{ ingredient.unit_price }} per {{ ingredient.unit }} </option>
+              {% endfor %}
+            </select>
+          </p>
+
+          <p>
+            <label for="quantity_Required">Quantity Required:</label>
+            <input type="number" name="quantity_Required" id="quantity_Required" required>
+          </p>
+
+        <input type="submit" class="btn btn-primary btn-lg" value="Add" />
+      </div>
+    </form>
+  </div>
+{% endblock %}
