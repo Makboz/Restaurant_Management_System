@@ -13,6 +13,7 @@
 
 
 # Development
+#### Django, Python, SQLite, HTML/CSS, Bootstrap
 - Developed entire backend modules of the app using Python on Django Web Framework. 
 - Created and managed a Multi-Model Database in Django to build an inventory, store a list of recipes and maintain a log of purchases.
 - Designed a responsive, user-friendly front-end using HTML, CSS and Bootstrap.
